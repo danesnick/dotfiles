@@ -1,0 +1,14 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "Fira Mono 12";
+ combi-modi: "window,drun,ssh";
+ }
+//@theme "solarized"
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+//@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+//@theme "/usr/share/rofi/themes/Monokai.rasi"
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
