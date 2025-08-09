@@ -176,3 +176,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+## TUI utiliies
+
+alias TUI_wifi="impala"
+alias TUI_audio="wiremix"
+alias TUI_monitor="bpytop"
+alias TUI_bluetooth="bluetui"
+alias TUI_files="yazi"
