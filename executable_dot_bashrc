@@ -178,7 +178,7 @@ unset __conda_setup
 
 ## TUI utiliies
 
-alias TUI_wifi="impala"
+alias TUI_wifi="nmtui"
 alias TUI_audio="wiremix"
 alias TUI_monitor="bpytop"
 alias TUI_bluetooth="bluetui"
