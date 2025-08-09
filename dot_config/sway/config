@@ -71,6 +71,10 @@ input type:touchpad {
     middle_emulation enabled
 }
 
+bindgesture swipe:right workspace prev
+bindgesture swipe:left workspace next
+
+
 ### Key bindings
 #
 # Basics:
