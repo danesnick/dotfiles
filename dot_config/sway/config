@@ -71,8 +71,8 @@ input type:touchpad {
     middle_emulation enabled
 }
 
-bindgesture swipe:right workspace prev
-bindgesture swipe:left workspace next
+bindgesture swipe:left workspace prev
+bindgesture swipe:right workspace next
 
 
 ### Key bindings
@@ -87,6 +87,7 @@ bindgesture swipe:left workspace next
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym Mod1+Space exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -102,8 +103,7 @@ bindgesture swipe:left workspace next
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Lock sway using gtklock
-    bindsym Mod1+Shift+L exec gtklock
-
+    bindsym $mod+Mod1+L exec gtklock
 
 
 # Moving around:
