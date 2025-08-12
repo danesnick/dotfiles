@@ -32,8 +32,8 @@ output * bg /home/ndanes/Insync/danesnick@outlook.com/OneDrive/Pictures/Wallpape
 set $lock 'gtklock'
 set $laptop eDP-1
 set $desktop DP-1
-bindswitch --reload --locked lid:on output $laptop disable;output $desktop mode 2560x1440@74.971 Hz; exec $lock
-bindswitch --reload --locked lid:off output $laptop enable; exec $lock
+bindswitch --reload --locked lid:on output $laptop disable; output $desktop mode 2560x1440@74.971 Hz; exec $lock; systemctl suspend
+bindswitch --reload --locked lid:off output $laptop enable
 
 exec_always ~/.config/sway/clamshell.sh
 
@@ -42,9 +42,10 @@ exec_always ~/.config/sway/clamshell.sh
 # Example configuration:
 #
 exec swayidle -w \
-          timeout 300 'gtklock' \
-          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'gtklock'
+timeout 300 'gtklock' \
+timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+timeout 900 'systemctl suspend' before-sleep 'gtklock' 
+
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -103,7 +104,7 @@ bindgesture swipe:right workspace next
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Lock sway using gtklock
-    bindsym $mod+Mod1+L exec gtklock
+    bindsym $mod+Mod1+L exec gtklock  
 
 
 # Moving around:
