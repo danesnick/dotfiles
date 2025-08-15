@@ -16,7 +16,7 @@
     "position": "top",
 
     // If height property would be not present, it'd be calculated dynamically
-    "height": 30,
+    "height": 24,
 
     "modules-left": [
         "sway/workspaces",
@@ -131,8 +131,8 @@
             "4:terminals": "", // Icon: terminal
             "5:portal": "", // Icon: terminal
             "urgent": "",
-            "focused": "",
-            "default": ""
+            "focused": "*",
+            "default": ""
         }
     },
 
@@ -169,7 +169,7 @@
 
     "tray": {
         "icon-size": 20,
-        "spacing": 10
+        "spacing": 8
     }
 
 }
