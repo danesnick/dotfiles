@@ -44,8 +44,7 @@ exec_always ~/.config/sway/clamshell.sh
 #
 exec swayidle -w \
 timeout 300 'gtklock' \
-timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' 
-#before-sleep 'gtklock' 
+timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'gtklock' 
 #timeout 750 'systemctl suspend' before-sleep 'gtklock' 
 
 #

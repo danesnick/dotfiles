@@ -50,8 +50,8 @@
 #waybar {
     background: #323232;
     color: white;
-    font-family: Cascadia Code NF;
-    font-size: 16px;
+    font-family: Inter;
+    font-size: 15px;
 }
 
 /* Each module */
