@@ -42,10 +42,14 @@ exec_always ~/.config/sway/clamshell.sh
 #
 # Example configuration:
 #
+#exec swayidle -w \
+#timeout 600 'gtklock' \
+#timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'gtklock' 
+##timeout 750 'systemctl suspend' before-sleep 'gtklock' 
 exec swayidle -w \
-timeout 300 'gtklock' \
-timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'gtklock' 
-#timeout 750 'systemctl suspend' before-sleep 'gtklock' 
+timeout 600 'swaylock-fancy' \
+timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+timeout 1800 'systemctl suspend' before-sleep 'swaylock-fancy' 
 
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -105,7 +109,8 @@ bindgesture swipe:right workspace next
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Lock sway using gtklock
-    bindsym $mod+Mod1+L exec gtklock  
+    #bindsym $mod+Mod1+L exec gtklock  
+    bindsym $mod+Mod1+L exec swaylock-fancy
 
 
 # Moving around:
