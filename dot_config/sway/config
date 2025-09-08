@@ -17,7 +17,7 @@ set $right l
 set $term xfce4-terminal
 # Your preferred application launcher
 #set $menu wmenu-run
-set $menu "rofi -combi-modi window,drun,ssh,run -terminal xfce4-terminal -show combi -show-icons"
+set $menu "rofi -combi-modi calc:~/show_calc.sh,window,drun,ssh,run -terminal xfce4-terminal -show combi -show-icons"
 
 ### Output configuration
 #
