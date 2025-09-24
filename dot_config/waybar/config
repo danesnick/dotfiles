@@ -77,6 +77,7 @@
     "cpu": {
         "interval": 5,
         "format": "CPU: {usage}% ({load})", // Icon: microchip
+        "on-click": "flatpak run io.missioncenter.MissionCenter",
         "states": {
           "warning": 70,
           "critical": 90
@@ -96,6 +97,7 @@
     "memory": {
         "interval": 5,
         "format": "Mem: {}%", // Icon: memory
+        "on-click": "flatpak run io.missioncenter.MissionCenter",
         "states": {
             "warning": 70,
             "critical": 90
