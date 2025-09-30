@@ -3,4 +3,8 @@ configuration {
  font: "Fira Mono 12";
  combi-modi: "window,drun,ssh,combi";
  }
-@theme "/home/ndanes/.config/rofi/themes/gruvbox-material.rasi"
+//@theme "/home/ndanes/.config/rofi/themes/gruvbox-material.rasi"
+
+//@theme "/usr/share/rofi/themes/material.rasi"
+
+@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"

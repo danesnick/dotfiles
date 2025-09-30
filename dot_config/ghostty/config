@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 #theme = light:gruvbox-material-soft-light,dark:gruvbox-material-soft-dark
-theme = gruvbox-material-soft-dark
+#theme = gruvbox-material-soft-dark
 font-family = Cascadia Code NF
 font-size = 15
 
