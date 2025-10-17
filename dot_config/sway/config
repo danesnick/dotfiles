@@ -37,6 +37,10 @@ bindswitch --reload --locked lid:on output $laptop disable; output $desktop mode
 bindswitch --reload --locked lid:off output $laptop enable
 
 exec_always ~/.config/sway/clamshell.sh
+exec_always autotiling 
+exec --no-startup-id dbus-update-activation-environment --all
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 
 ### Idle configuration
 #
@@ -249,6 +253,7 @@ bindsym $mod+r mode "resize"
 exec mako
 exec kdeconnect-indicator
 exec insync start
+exec blueman-applet
 #
 # Status Bar:
 #
